@@ -4,7 +4,7 @@ import AgregaTareas from "./AgregaTareas";
 const Item = ({ nombre, visto }) => {
   return (
     <li>
-      {nombre} {visto ? " - Visto" : " - No visto"}
+      {nombre} {visto ? "✔" : "❌"}
     </li>
   );
 };
