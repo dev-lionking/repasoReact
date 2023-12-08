@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import PrimerComponente from "./PrimerComponente";
+import ListadoApp from "./components/ListadoApp";
+// import ContadorApp from "./components/ContadorApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <PrimerComponente titulo="Este titulo es de props" />
+    {/* <ContadorApp value={0} /> */}
+    <ListadoApp />
   </React.StrictMode>
 );
