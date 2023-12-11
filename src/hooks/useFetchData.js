@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 import { fetchData } from "../helpers/FetchData";
-const useFetchData = (endPoint) => {
-  useState;
 
+const useFetchData = (endPoint) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const getData = async () => {
+    const { data, isLoading } = await fetchData(endPoint);
+    setData(data), setIsLoading(isLoading);
+  };
+
   useEffect(() => {
-    fetchData(endPoint);
+    getData();
   }, [endPoint]);
 
   return {
